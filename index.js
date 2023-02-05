@@ -11,5 +11,8 @@ app.use(Gun.serve)
 const server = app.listen(port, () => {
   console.log(`Gun server running on port ${port}🔥`)
 })
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 Gun({ web: server })
